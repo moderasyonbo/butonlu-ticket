@@ -14,7 +14,7 @@ const Discord = require('discord.js');
         "**Bilet Sistemi Bu Sunucuda Zaten Kurulu Değil!**"
       ).catch(() => {})
     
-      await db.delete("csticket"+ button.guild.id)
+      await db.delete(`csticket_${button.guild.id}`)
       button.channel.send("Başarıyla Verileri Temizledim!")
           }
           if (args[0] == "aç") {
