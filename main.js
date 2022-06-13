@@ -85,7 +85,7 @@ fs.readdir("./events/", (err, files) => {
     
     //------------\\
     if(button.id === "ticket"){
-    if(data) return button.reply.send("> **Başarısız!** Zaten aktif destek talebiniz bulunuyor. **Kanal:** <#" + data +">", true);
+
     
     button.reply.think(true).then(async a => {
       if(!button.guild.channels.cache.find(c => c.name === "Destek Sistemi")){
