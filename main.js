@@ -93,7 +93,7 @@ fs.readdir("./events/", (err, files) => {
       }
       setTimeout(() => {
         const csk = button.guild.channels.cache.find(c => c.name === "Destek Sistemi")
-    button.guild.channels.create('destek-' + member.user.username , { type: 'text', reason: 'Destek '+ member.user.tag, `Bilet ${member.user} tarafından oluşturuldu.` }).then(async c => {
+    button.guild.channels.create('destek-' + member.user.username , { type: 'text', reason: 'Destek '+ member.user.tag, topic: `Bilet ${member.user} tarafından oluşturuldu.` }).then(async c => { }).then(async c => {
     c.setParent(csk.id);
     
     await cdb.set(`destekkanal_${c.id}`, member.id);
